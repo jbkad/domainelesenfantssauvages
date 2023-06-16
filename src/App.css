@@ -1,38 +1,71 @@
-.App {
+/* font */
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100;0,300;0,600;1,200&display=swap');
+
+#app {
+  background-color: #f5f5f7;
+  color: #1d1d1f;
+  font-family: 'Urbanist', sans-serif; 
+  zoom: 100%;
+  margin: 0;
+  padding: 0;
+  z-index: 0;
+}
+
+.app-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 15px;
+  justify-content: space-between;
+  /* align-items: center; */
+  height: 100%;
   text-align: center;
+
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+html {
+  scroll-behavior: smooth;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* constants */
+br {
+  margin-bottom: 40px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.break-sml {
+  margin-bottom: 10px;
 }
 
-.App-link {
-  color: #61dafb;
+/* navbar title */
+h1 {
+  font-size: 2.2em;
+  /* font-size: 35px; */
+  /* font-weight: 500; */
+  font-weight: 800;
+  padding: 0;
+  margin: 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* headings */
+h2 {
+  font-size: 2em;
+  /* font-size: 32px;  */
+  font-weight: 500;
+  padding: 0;
+  margin: 0;
+}
+
+/* subheadings */
+h3 {
+  font-size: 1.17em;
+  /* font-size: 22px; */
+  font-weight: bold;
+  padding: 0;
+  margin: 0;
+}
+
+/* paragraphy body */
+p {
+  font-size: 1.45em;
+  /* font-size: 23px; */
+  /* margin: 0; */
 }
