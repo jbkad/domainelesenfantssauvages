@@ -1,7 +1,5 @@
 .gallery {
     overflow: hidden;
-    
-    /* position: relative; */
 }
 
 .gallery-item {
@@ -10,13 +8,6 @@
     align-items: center;
     justify-content: center;
     height: 100%;
-    /* width: calc(100% / 4); */
-    /* color: #1d1d1f; */
-
-
-    /* width: 100%;
-    overflow: hidden;
-    position: relative; */
 }
 
 .gallery-item img {
@@ -28,9 +19,4 @@
 .inner-gallery {
     white-space: nowrap;
     transition: transform 0.3s;
-
-    /* height: 100%;
-    display: flex;
-    position: relative; */
-
 }

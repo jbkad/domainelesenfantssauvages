@@ -1,0 +1,38 @@
+{
+    "privacypolicy.heading": "Privacy Policy",
+    "privacypolicy.generalnote": "General note and mandatory information",
+    
+    "privacypolicy.designation-of-responsible-organisation-heading": "Designation of the responsible organisation",
+    "privacypolicy.designation-of-responsible-organisation-1": "The responsible data processing unit on this site is:",
+    "privacypolicy.designation-of-responsible-organisation-2": "and",
+    "privacypolicy.designation-of-responsible-organisation-3": "The responsible organization, alone or together with others, decide on the purposes and means of processing personal data (such as names, contact details, etc.).",
+
+    "privacypolicy.recovation-of-consent-heading": "Revocation of your consent to data processing",
+    "privacypolicy.recovation-of-consent-1": "Only with your express consent are certain data processing processes possible. A revocation of your consent already given is possible at any time. For the revocation is sufficient an informal message by e-mail. The legality of the data processing carried out until the revocation remains unaffected by the revocation.",
+    
+    "privacypolicy.right-to-compliant-heading": "Right to lodge a complaint with the competent authority",
+    "privacypolicy.right-to-compliant-1": "As a data subject, in the event of a breach of data protection law, you have a right of appeal to the competent supervisory authority. The competent data protection supervisory authority is the data protection officer of the federal state in which our company is headquartered. Here's a list of data protection officers and their ",
+    "privacypolicy.right-to-compliant-2": "their contact details",
+    
+    "privacypolicy.data-portability-heading": "Right to data portability",
+    "privacypolicy.data-portability-1": "You have the right to have data that we process on the basis of your consent or in fulfillment of a contract automatically to you or to third parties. The layout is made in a machine-readable format. If you require the direct transfer of the data to another responsible person, this will only be done insofar as this is technically possible.",
+    "privacypolicy.data-portability-2": "Right to information, correction, blocking, deletion",
+    "privacypolicy.data-portability-3": "You have the right at any time within the framework of the applicable legal provisions to provide free information about your stored personal data, the source of the data, their recipients and the purpose of the data processing and, if necessary, a right to rectification, deletion or deletion of this data. In this regard and also for further questions on the subject of personal data, you can always contact us via the contact options in the imprint.",
+
+    "privacypolicy.data-protection-officer-heading": "Data Protection Officer",
+
+    "privacypolicy.server-log-files-heading": "Server log files",
+    "privacypolicy.server-log-files-1": "In server log files, the website provider automatically collects and stores information that your browser automatically sends to us. These are:",
+    "privacypolicy.server-log-files-li-1": "Browser type and browser version",
+    "privacypolicy.server-log-files-li-2": "Operating system used",
+    "privacypolicy.server-log-files-li-3": "Referrer URL",
+    "privacypolicy.server-log-files-li-4": "Host name of accessing computer",
+    "privacypolicy.server-log-files-li-5": "Time of server request",
+    "privacypolicy.server-log-files-li-6": "IP address",
+    "privacypolicy.server-log-files-2": "There is no merging of this data with other data sources. The basis for data processing is Art. 6 para. 1 lit. b DSGVO, which allows the processing of data to fulfill a contract or pre-contractual measures.",
+
+    "privacypolicy.contact-1": "The data submitted via the contact form, including your contact details, will be stored to process your request or be available for follow-up questions. A disclosure of this data will not take place without your consent. The processing of the data entered in the contact form takes place exclusively on the basis of your consent (Art. 6 para. 1 letter DSGVO). A revocation of your consent already given is possible at any time. For the revocation is sufficient an informal message by e-mail. The legality of the data processing carried out until the revocation remains unaffected by the revocation.",
+    "privacypolicy.contact-2": "Data submitted via the contact form will remain with us until you ask us to delete it, revoke your consent to storage or you no longer need to store your data. Mandatory legal provisions - in particular retention periods - remain unaffected.",
+
+    "privacypolicy.privacy-configurator": "Privacy configurator from"
+}

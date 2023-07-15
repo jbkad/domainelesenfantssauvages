@@ -1,10 +1,14 @@
 import { useEffect, useState, useRef } from "react";
-import { Link, NavLink } from "react-router-dom";
-import { Link as ScrollLink, Element } from 'react-scroll';
-import { menu_nav_icon, english_translation_icon, exit_button } from '../styles/utils/Constants';
+import { Link, useLocation } from "react-router-dom";
+import { Link as ScrollLink } from 'react-scroll';
+import { menu_nav_icon, exit_button } from '../styles/utils/Constants';
+import { useTranslation } from "react-i18next";
 import '../styles/Navbar.css';
 
 export default function Navbar(){
+    const  { t } = useTranslation('navbar');
+    const location = useLocation();
+
     const [showNavbar, setShowNavbar] = useState(false);
     const navbarRef = useRef(null);
 
@@ -29,26 +33,41 @@ export default function Navbar(){
             document.removeEventListener("mousedown", handleClickOutside);
         };
     }, []);
+
+    const scrollToTop = () => {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth",
+        });
+    };
+
+    const isHomePage = location.pathname === "/";
     
+    const handleOffcanvasItemClick = () => {
+        setShowNavbar(false);
+    }
+
     return (
         <nav id="navbar" ref={navbarRef}>
             <div className="navbar-container">
-                    {/* <Link to="/" className="navbar-logo-container">
-                        <img 
-                            src="/assets/domaine-logo.png"
-                            alt="Domaine Les Enfants Sauvages logo" 
-                            className="navbar-logo" 
-                        />
-                    </Link> */}
                 <div className="navbar-contents">
-                    <div className="navbar-title">
-                        <Link to="/" className="navbar-heading">
-                            <h1>Domaine Les Enfants Sauvages</h1>
-                        </Link>
-                        <h3 className="navbar-subheading">
-                            Handmade organic biodynamic wines
-                        </h3>
-                    </div>
+                    <Link to="/" className="navbar-heading" onClick={scrollToTop}>
+                        <div className="navbar-title">
+                            <img
+                                src="/assets/domaine-logo.png"
+                                alt="Domaine Les Enfants Sauvages logo"
+                                className="navbar-logo"
+                            />
+                            <div>
+                                <h1>
+                                    Domaine Les Enfants Sauvages
+                                </h1>
+                                <h3 className="navbar-subheading">
+                                    {t("navbar.subheading")}
+                                </h3>
+                            </div>
+                        </div>
+                    </Link>
                 </div>
 
                 <div className="menu-icon" onClick={handleShowNavbar}>
@@ -56,18 +75,47 @@ export default function Navbar(){
                 </div>
 
                 <div className={`nav-elements ${showNavbar && 'active'}`}>
-                    <div className="nav-hover">
-                        <div className="menu-exit-button" onClick={handleShowNavbar}>
-                            {exit_button}
-                        </div>
-                        <ul className="navbar-menu-items"> 
-                            <li><ScrollLink to="/ourstory" smooth={true} duration={300} onClick={handleMenuClick}>Our Story</ScrollLink></li>
-                            <li><ScrollLink to="/ourwines" smooth={true} duration={300} onClick={handleMenuClick}>Our Wines</ScrollLink></li>
-                            <li><ScrollLink to="/contact" smooth={true} duration={300} onClick={handleMenuClick}>Contact</ScrollLink></li>
-                            {/* <li><ScrollLink to="/fr" onClick={handleMenuClick} className="english-translation-button">{english_translation_icon}</ScrollLink></li> */}
-                        </ul>
-
+                    <div className="menu-exit-button" onClick={handleShowNavbar}>
+                        {exit_button}
                     </div>
+                    <ul className="navbar-menu-items" onClick={handleMenuClick}> 
+                        {isHomePage && (
+                            <>
+                                <li>
+                                    <ScrollLink 
+                                        to="/ourstory" 
+                                        smooth={true} 
+                                        duration={300} 
+                                        offset={-150}
+                                        onClick={handleOffcanvasItemClick}
+                                    >
+                                        {t("navbar.ourstory")}
+                                    </ScrollLink>
+                                </li>
+                                <li>
+                                    <ScrollLink 
+                                        to="/ourwines" 
+                                        smooth={true} 
+                                        duration={300} 
+                                        offset={-150}
+                                        onClick={handleOffcanvasItemClick}
+                                    >
+                                        {t("navbar.ourwines")}
+                                    </ScrollLink>
+                                </li>
+                            </>
+                        )}
+                        <li>
+                            <ScrollLink 
+                                to="/contact" 
+                                smooth={true} 
+                                duration={300}
+                                onClick={handleOffcanvasItemClick}
+                            >
+                                Contact
+                            </ScrollLink>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </nav>

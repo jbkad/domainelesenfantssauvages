@@ -1,66 +1,59 @@
-import React from "react";
+import React, { useState } from "react";
+import { useTranslation } from "react-i18next";
 import { Element } from "react-scroll";
 import '../styles/OurWines.css';
 
 export default function OurWines() {
+    const { t } = useTranslation('ourwines');
+
+    const [hoveredImg, setHoveredImg] = useState(null);
+
+    const handleImageHover = (index) => {
+        setHoveredImg(index);
+    };
+
+    const handleImageLeave = () => {
+        setHoveredImg(null);
+    };
+
+    const captions = [
+        t("caption-1"),
+        t("caption-2"),
+        t("caption-3"),
+        t("caption-4"),
+        t("caption-5"),
+        t("caption-6"),
+        t("caption-7")
+    ];
+
     return (
         <Element name="/ourwines" id="our-wines">
-            <h2>Our Wines</h2>
-            <br />
-
-            {/* <div className="our-wines-img-container"> */}
-                <img 
-                    src="/assets/domaine-wine-1.png"
-                    alt="Domaine Les Enfants Sauvages wine" 
-                    className="our-wines-img"
-                    // data-text="Hello World"
-                />
-                {/* <div className="our-wines-img-text-overlay">
-                    Domaine Les Enfants Sauvages
-                </div> */}
-            {/* </div> */}
-            
-            {/* <div className="our-wines-img-container"> */}
-                <img 
-                    src="/assets/domaine-wine-2.png"
-                    alt="Domaine Les Enfants Sauvages wine" 
-                    className="our-wines-img"
-                    data-text="Hello World 2" 
-                />
-                {/* <div className="hover-text">Hello World 2</div> */}
-            {/* </div> */}
-            <img 
-                src="/assets/domaine-wine-3.png"
-                alt="Domaine Les Enfants Sauvages wine" 
-                className="our-wines-img"
-                data-text="Hello World 3"
-            />
-            <img 
-                src="/assets/domaine-wine-4.png"
-                alt="Domaine Les Enfants Sauvages wine" 
-                className="our-wines-img"
-                data-text="Hello World 4"
-            />
-            <img 
-                src="/assets/domaine-wine-5.png"
-                alt="Domaine Les Enfants Sauvages wine" 
-                className="our-wines-img"
-                data-text="Hello World 5" 
-            />
-            <img 
-                src="/assets/domaine-wine-6.png"
-                alt="Domaine Les Enfants Sauvages wine" 
-                className="our-wines-img"
-                data-text="Hello World 6"
-            />
-            <img 
-                src="/assets/domaine-wine-7.png"
-                alt="Domaine Les Enfants Sauvages wine" 
-                className="our-wines-img"
-                data-text="Hello World 7"
-            />
+            <h2 className="our-wines-heading">
+                {t("ourwines.heading")}
+            </h2>
+            <div className="our-wines-container">
+                {Array.from({ length: 7}, (_, index) => (
+                    <div
+                        key={index}
+                        className={`our-wines-img-container ${
+                            hoveredImg === index ? "hovered" : ""
+                        }`}
+                        onMouseEnter={() => handleImageHover(index)}
+                        onMouseLeave={handleImageLeave}
+                    >
+                        <img 
+                            src={`/assets/wine-${index + 1}.png`}
+                            alt="Domaine Les Enfants Sauvages wine" 
+                            className="our-wines-img"
+                        />
+                        {hoveredImg === index && (
+                            <div className="img-overlay">
+                                <div className="img-caption">{captions[index]}</div>
+                            </div>
+                        )}
+                    </div>
+                ))}
+            </div>
         </Element>
-
-
     );
 }

@@ -1,9 +1,9 @@
 #footer {
-  height: 100%;
+  position: relative;
+  bottom: 0;
   width: 100%;
   justify-content: center;
   background-color: #f0f0f0;
-  position: relative;
   flex-shrink: 0;
 }
 
@@ -11,17 +11,13 @@
   height: 100%;
   max-width: 1100px;
   margin: 0 auto;
-  /* margin-top: 10px; */
   padding: 15px;
-  /* padding-top: 8px; */
-  /* justify-content: space-between; */
   align-items: center;
 }
 
 /* footer-top-row */
 .footer-top-row {
   margin: 0 auto;
-  padding-bottom: 10px;
   display:flex;
   justify-content: space-between;
   align-items: center;
@@ -31,7 +27,7 @@
   display: inline-flex;
   align-items: center;
   color: #282c34;  
-  font-size: 30px;
+  font-size: 1.875em;
   margin: 0;
   vertical-align: middle;
 }
@@ -54,27 +50,26 @@
 }
 
 .footer-bottom-row-links {
-  /* display:flex; */
-  /* align-items: center; */
+  display: flex;
 }
 
 .footer-link {
-  margin-right: 10px;
+  margin-right: 8px;
 }
 
 .footer-names {
+  font-size: 1em;
   font-weight: 600;
 }
 
-ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+.footer-social-icons {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
 }
 
-li {
-  display: inline-block;
-  margin: 0 20px 0 0;
+.footer-icons-spacing {
+  padding-right: 10px;
 }
 
 a {
@@ -86,13 +81,25 @@ a:hover {
   color: red;
 }
 
-/* smaller screens (mobile) */
-/* @media (max-width: 600px) { */
-@media (max-width: 650px) {
+@media (max-width: 768px) {
   .footer-top-row-name {
     inline-size: 250px;
   }
 
+  .footer-bottom-row-links {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .footer-names {
+    align-self: flex-end;
+  }
+}
+
+
+/* smaller screens (mobile) */
+@media (max-width: 600px) {
+/* @media (max-width: 650px) { */
   .footer-top-row-location {
     width: max-content;
   }
@@ -101,29 +108,23 @@ a:hover {
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-    align-items: start;
+    align-items: flex-start;
   }
 
   .footer-social-icons {
     margin-top: 10px;
   }
+  
+  .footer-social-icons a {
+    padding-right: 20px;
+  }
 
   /* bottom row */
   .footer-bottom-row {
-    /* display: flex; */
-    /* flex-direction: column; */
-    /* align-items: start; */
+    display: flex;
   } 
 
-  .footer-bottom-row-links {
-    display: flex;
-    flex-direction: row;
-    align-items: start;
-  }
-
   .footer-names {
-    align-items: end;
-    /* inline-size: min-content; */
+    inline-size: 178px;
   }
-
 }
