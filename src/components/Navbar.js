@@ -38,6 +38,7 @@ export default function Navbar(){
         window.scrollTo({
             top: 0,
             behavior: "smooth",
+            delay: 0
         });
     };
 

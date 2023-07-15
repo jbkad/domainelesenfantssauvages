@@ -15,6 +15,7 @@ export default function TranslationButton(){
         window.scrollTo({
             top: 0,
             behavior: "smooth",
+            delay: 0
         });
     };
 
