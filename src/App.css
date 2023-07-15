@@ -1,6 +1,10 @@
 /* font */
 @import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100;0,300;0,600;1,200&display=swap');
 
+html {
+  scroll-behavior: smooth;
+}
+
 #app {
   background-color: #f5f5f7;
   color: #1d1d1f;
@@ -16,30 +20,29 @@
   margin: 0 auto;
   padding: 0 15px;
   justify-content: space-between;
-  /* align-items: center; */
   height: 100%;
-  text-align: center;
-
+  /* position: relative;
+  min-height: 100vh; */
 }
 
-html {
-  scroll-behavior: smooth;
+.center-text {
+  text-align: center;
 }
 
 /* constants */
 br {
   margin-bottom: 40px;
+  display: block;
 }
 
-.break-sml {
-  margin-bottom: 10px;
+span {
+  margin-bottom: 20px;
+  display: block;
 }
 
 /* navbar title */
 h1 {
   font-size: 2.2em;
-  /* font-size: 35px; */
-  /* font-weight: 500; */
   font-weight: 800;
   padding: 0;
   margin: 0;
@@ -48,7 +51,6 @@ h1 {
 /* headings */
 h2 {
   font-size: 2em;
-  /* font-size: 32px;  */
   font-weight: 500;
   padding: 0;
   margin: 0;
@@ -57,15 +59,16 @@ h2 {
 /* subheadings */
 h3 {
   font-size: 1.17em;
-  /* font-size: 22px; */
   font-weight: bold;
   padding: 0;
   margin: 0;
 }
 
 /* paragraphy body */
-p {
-  font-size: 1.45em;
-  /* font-size: 23px; */
-  /* margin: 0; */
+
+bold {
+  margin: 5px 0 0 0;
+  padding: 0;
+  font-weight: bold;
+  display: block;
 }
