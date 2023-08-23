@@ -1,15 +1,15 @@
 import React, { useEffect, useState } from "react";
 import '../styles/Gallery.css';
-    const image = require('../assets/domaine-logo.png');
 
 // gallery item - renders the gallery items
 export const GalleryItem = ({ children, width, image }) => {
-    
-
     return (
         <div className="gallery-item" style={{ width: width }}>
-            <img src={image} alt="Gallery Item" />
-            {children}
+            <img 
+                src={image} 
+                alt="Gallery Item" 
+            />
+                {children}
         </div>
     );
 }
