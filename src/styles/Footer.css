@@ -18,7 +18,7 @@
 /* footer-top-row */
 .footer-top-row {
   margin: 0 auto;
-  display:flex;
+  display: flex;
   justify-content: space-between;
   align-items: center;
 }
@@ -81,9 +81,13 @@ a:hover {
   color: red;
 }
 
+.footer__scroll-btn {
+  display: none;
+}
+
 @media (max-width: 768px) {
   .footer-top-row-name {
-    inline-size: 250px;
+    /* inline-size: 250px; */
   }
 
   .footer-bottom-row-links {
@@ -100,6 +104,10 @@ a:hover {
 /* smaller screens (mobile) */
 @media (max-width: 600px) {
 /* @media (max-width: 650px) { */
+  .footer-top-row-name {
+    inline-size: 250px;
+  }
+
   .footer-top-row-location {
     width: max-content;
   }
@@ -126,5 +134,16 @@ a:hover {
 
   .footer-names {
     inline-size: 178px;
+    text-align: right;
+  }
+
+  .footer__scroll-btn {
+    display: block;
+    position: fixed;
+    left: 82%;
+    right: 20%;
+    bottom: 10%;
+    padding: 30px;        
+    color: #aa9f9f6e;
   }
 }

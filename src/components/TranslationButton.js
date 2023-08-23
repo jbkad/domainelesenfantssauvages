@@ -1,5 +1,6 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
+import { scrollToTop } from "../styles/utils/Constants";
 import "../styles/TranslationButton.css";
 
 export default function TranslationButton(){
@@ -11,21 +12,20 @@ export default function TranslationButton(){
         i18n.changeLanguage(newLanguage);
     }
 
-    const scrollToTop = () => {
-        window.scrollTo({
-            top: 0,
-            behavior: "smooth",
-            delay: 0
-        });
-    };
-
-    const handleClick = () => {
-        toggleLanguage();
-        scrollToTop();
-    };
+    // const handleClick = () => {
+    //     toggleLanguage();
+    //     scrollToTop();
+    // };
 
     return (
-        <div onClick={handleClick} className='translation-button'> 
+        <div 
+            onClick={() => {
+                toggleLanguage(); 
+                scrollToTop();
+            }} 
+            className='translation-button'
+
+        > 
             {i18n.language === "fr" ? "English" : "Français"}
         </div>
     );

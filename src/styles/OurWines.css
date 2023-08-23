@@ -1,6 +1,10 @@
 .our-wines-heading {
     text-align: center;
-    margin-bottom: 30px;
+}
+
+.our-story-subheading {
+    text-align: center;
+    margin-bottom: 10px;
 }
 
 .our-wines-container {
@@ -32,6 +36,21 @@
     transition: 0.5s;
     border-radius: 10px;
     transition: opacity 0.3s;
+}
+
+.our-wines-img-skeleton {
+    opacity: 0.7;
+    animation: skeleton-loading 1s linear infinite alternate;
+}
+
+@keyframes skeleton-loading {
+    0% {
+        background-color: hsl(200, 20%, 70%);
+    }
+    
+    100% {
+        background-color: hsl(200, 20%, 95%);
+    }
 }
 
 .img-overlay {

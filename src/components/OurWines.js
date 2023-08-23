@@ -23,16 +23,18 @@ export default function OurWines() {
         t("caption-4"),
         t("caption-5"),
         t("caption-6"),
-        t("caption-7")
     ];
 
     return (
         <Element name="/ourwines" id="our-wines">
             <h2 className="our-wines-heading">
                 {t("ourwines.heading")}
-            </h2>
+            </h2> 
+            <h3 className="our-story-subheading">
+                {t("ourwines.subheading")}
+            </h3>
             <div className="our-wines-container">
-                {Array.from({ length: 7}, (_, index) => (
+                {Array.from({ length: 6}, (_, index) => (
                     <div
                         key={index}
                         className={`our-wines-img-container ${
@@ -42,8 +44,8 @@ export default function OurWines() {
                         onMouseLeave={handleImageLeave}
                     >
                         <img 
-                            src={`/assets/wine-${index + 1}.png`}
-                            alt="Domaine Les Enfants Sauvages wine" 
+                            src={require(`../assets/wine-${index + 1}.png`)}
+                            alt="Wine" 
                             className="our-wines-img"
                         />
                         {hoveredImg === index && (

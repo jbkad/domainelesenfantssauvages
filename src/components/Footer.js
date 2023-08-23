@@ -1,5 +1,5 @@
 import React from "react";
-import { mail_footer_icon, phone_footer_icon, instagram_footer_icon, location_footer_icon } from '../styles/utils/Constants';
+import { mail_footer_icon, phone_footer_icon, instagram_footer_icon, location_footer_icon, scroll_icon, scrollToTop } from '../styles/utils/Constants';
 import { Link } from "react-router-dom";
 import { Element } from "react-scroll";
 import TranslationButton from "./TranslationButton";
@@ -8,13 +8,6 @@ import '../styles/Footer.css';
 
 export default function Footer(){
     const { t } = useTranslation('footer');
-
-    const scrollToTop = () => {
-        window.scrollTo({
-            top: 0,
-            behavior: "smooth",
-        });
-    };
 
     return (
         <Element name="/contact" id="footer">
@@ -53,7 +46,16 @@ export default function Footer(){
                         </Link>
                         <TranslationButton />
                     </div>
-                    <div className="footer-names">Carolin, Nikolaus Bantlin  |  Juri, Falk Bantlin</div>
+                    <div className="footer-names">
+                        Carolin, Nikolaus Bantlin | Juri, Falk Bantlin
+                    </div>
+                    <div 
+                        className='footer__scroll-btn'
+                        data-testid='footer__scroll-btn'
+                        onClick={scrollToTop}
+                    >
+                        {scroll_icon}
+                    </div>
                 </div>
             </div>
         </Element>

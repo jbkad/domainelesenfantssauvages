@@ -1,7 +1,7 @@
-import { useEffect, useState, useRef } from "react";
+import { useState, useRef } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Link as ScrollLink } from 'react-scroll';
-import { menu_nav_icon, exit_button } from '../styles/utils/Constants';
+import { menu_nav_icon, exit_button, scrollToTop } from '../styles/utils/Constants';
 import { useTranslation } from "react-i18next";
 import '../styles/Navbar.css';
 
@@ -20,28 +20,7 @@ export default function Navbar(){
         setShowNavbar(false);
     };
 
-    useEffect(() => {
-        const handleClickOutside = (event) => {
-            if (navbarRef.current && !navbarRef.current.contains(event.target)) {
-                setShowNavbar(false);
-            }
-        };
-
-        document.addEventListener("mousedown", handleClickOutside);
-
-        return () => {
-            document.removeEventListener("mousedown", handleClickOutside);
-        };
-    }, []);
-
-    const scrollToTop = () => {
-        window.scrollTo({
-            top: 0,
-            behavior: "smooth",
-            delay: 0
-        });
-    };
-
+    // ensures that the user is on the homepage to show particular nav elements. 
     const isHomePage = location.pathname === "/";
     
     const handleOffcanvasItemClick = () => {
@@ -52,18 +31,22 @@ export default function Navbar(){
         <nav id="navbar" ref={navbarRef}>
             <div className="navbar-container">
                 <div className="navbar-contents">
-                    <Link to="/" className="navbar-heading" onClick={scrollToTop}>
+                    <Link 
+                        to="/" className="navbar-heading" 
+                        onClick={scrollToTop}
+                    >
                         <div className="navbar-title">
                             <img
-                                src="/assets/domaine-logo.png"
-                                alt="Domaine Les Enfants Sauvages logo"
+                                src={require("../assets/domaine-logo.png")}
+                                alt="Logo"
                                 className="navbar-logo"
                             />
                             <div>
                                 <h1>
                                     Domaine Les Enfants Sauvages
                                 </h1>
-                                <h3 className="navbar-subheading">
+                                <h3 
+                                    className="navbar-subheading">
                                     {t("navbar.subheading")}
                                 </h3>
                             </div>
@@ -71,15 +54,24 @@ export default function Navbar(){
                     </Link>
                 </div>
 
-                <div className="menu-icon" onClick={handleShowNavbar}>
+                <div 
+                    className="menu-icon" 
+                    onClick={handleShowNavbar}
+                >
                     {menu_nav_icon}
                 </div>
 
                 <div className={`nav-elements ${showNavbar && 'active'}`}>
-                    <div className="menu-exit-button" onClick={handleShowNavbar}>
+                    <div 
+                        className="menu-exit-button" 
+                        onClick={handleShowNavbar}
+                    >
                         {exit_button}
                     </div>
-                    <ul className="navbar-menu-items" onClick={handleMenuClick}> 
+                    <ul 
+                        className="navbar-menu-items" 
+                        onClick={handleMenuClick}
+                    > 
                         {isHomePage && (
                             <>
                                 <li>
