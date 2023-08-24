@@ -45,9 +45,10 @@ export default function Navbar(){
                     >
                         <div className="navbar-title">
                             <img
-                                src={require("../assets/domaine-logo.png")}
+                                src={require("../assets/logo.webp")}
                                 alt="Logo"
                                 className="navbar-logo"
+                                loading="lazy"  
                             />
                             <div>
                                 <h1>

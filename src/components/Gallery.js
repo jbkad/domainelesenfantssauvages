@@ -7,7 +7,8 @@ export const GalleryItem = ({ children, width, image }) => {
         <div className="gallery-item" style={{ width: width }}>
             <img 
                 src={image} 
-                alt="Gallery Item" 
+                alt="Gallery Item"
+                loading="lazy"  
             />
                 {children}
         </div>

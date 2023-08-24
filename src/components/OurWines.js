@@ -44,7 +44,7 @@ export default function OurWines() {
                         onMouseLeave={handleImageLeave}
                     >
                         <img 
-                            src={require(`../assets/wine-${index + 1}.png`)}
+                            src={require(`../assets/wine-${index + 1}.webp`)}
                             alt="Wine" 
                             className="our-wines-img"
                         />
