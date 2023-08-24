@@ -1,22 +1,14 @@
-import React, { useState } from "react";
+import React from "react";
 import { mail_footer_icon, phone_footer_icon, instagram_footer_icon, location_footer_icon } from '../styles/utils/Constants';
 import { Link } from "react-router-dom";
 import { Element } from "react-scroll";
 import TranslationButton from "./TranslationButton";
 import { useTranslation } from "react-i18next";
-import '../styles/Footer.css';
 import ScrollButton from "./ScrollButton";
+import '../styles/Footer.css';
 
 export default function Footer(){
     const { t } = useTranslation('footer');
-
-    const footerScrollToTop = () => {
-        window.scrollTo({
-            top: 0,
-            behavior: "smooth",
-            delay: 0
-        });
-    };
 
     return (
         <Element name="/contact" id="footer">
