@@ -1,13 +1,22 @@
-import React from "react";
-import { mail_footer_icon, phone_footer_icon, instagram_footer_icon, location_footer_icon, scroll_icon, scrollToTop } from '../styles/utils/Constants';
+import React, { useState } from "react";
+import { mail_footer_icon, phone_footer_icon, instagram_footer_icon, location_footer_icon } from '../styles/utils/Constants';
 import { Link } from "react-router-dom";
 import { Element } from "react-scroll";
 import TranslationButton from "./TranslationButton";
 import { useTranslation } from "react-i18next";
 import '../styles/Footer.css';
+import ScrollButton from "./ScrollButton";
 
 export default function Footer(){
     const { t } = useTranslation('footer');
+
+    const footerScrollToTop = () => {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth",
+            delay: 0
+        });
+    };
 
     return (
         <Element name="/contact" id="footer">
@@ -38,10 +47,10 @@ export default function Footer(){
                 
                 <div className="footer-bottom-row">
                     <div className="footer-bottom-row-links">
-                        <Link to="/legalnotice" className='footer-link' preventScrollReset={true} onClick={scrollToTop}>
+                        <Link to="/legalnotice" className='footer-link' preventScrollReset={true}>
                             {t("footer.legalnotice")}
                         </Link>
-                        <Link to="/privacypolicy" className='footer-link' onClick={scrollToTop}>
+                        <Link to="/privacypolicy" className='footer-link'>
                             {t("footer.privacypolicy")}
                         </Link>
                         <TranslationButton />
@@ -49,13 +58,9 @@ export default function Footer(){
                     <div className="footer-names">
                         Carolin, Nikolaus Bantlin | Juri, Falk Bantlin
                     </div>
-                    <div 
-                        className='footer__scroll-btn'
-                        data-testid='footer__scroll-btn'
-                        onClick={scrollToTop}
-                    >
-                        {scroll_icon}
-                    </div>
+
+                    <ScrollButton />
+                    
                 </div>
             </div>
         </Element>

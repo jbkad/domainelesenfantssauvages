@@ -5,10 +5,12 @@ import LegalNotice from './pages/LegalNotice';
 import PrivacyPolicy from './pages/PrivacyPolicy';
 import Home from './pages/Home';
 import Navbar from './components/Navbar';
+import ScrollToTop from './components/ScrollToTop';
 
 function App() {
   return (
       <div id="app">
+        <ScrollToTop />
         <Navbar />
           <div className='app-container'>
             <Routes>
