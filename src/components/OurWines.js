@@ -44,7 +44,7 @@ export default function OurWines() {
                         onMouseLeave={handleImageLeave}
                     >
                         <img 
-                            src={require(`../assets/wine-${index + 1}.webp`)}
+                            src={require(`../assets/wines/wine-${index + 1}.webp`)}
                             alt="Wine" 
                         />
                         {hoveredImg === index && (

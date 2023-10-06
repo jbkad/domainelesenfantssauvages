@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { ReactComponent as ScrollIcon } from '../assets/ScrollIcon.svg';
+import { ReactComponent as ScrollIcon } from '../assets/svgs/ScrollIcon.svg';
 import '../styles/ScrollButton.css';
 
 const ScrollButton = () => {

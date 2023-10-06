@@ -9,7 +9,7 @@ import ScrollToTop from './components/ScrollToTop';
 
 function App() {
   return (
-      <div id="app">
+      <div className="app" id="app">
         <ScrollToTop />
         <Navbar />
           <div className='app-container'>

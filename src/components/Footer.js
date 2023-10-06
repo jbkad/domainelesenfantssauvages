@@ -1,8 +1,8 @@
 import React from "react";
-import { ReactComponent as MailIcon } from '../assets/MailIcon.svg';
-import { ReactComponent as InstagramIcon } from '../assets/InstagramIcon.svg';
-import { ReactComponent as PhoneIcon } from '../assets/PhoneIcon.svg';
-import { ReactComponent as LocationIcon } from '../assets/LocationIcon.svg';
+import { ReactComponent as MailIcon } from '../assets/svgs/MailIcon.svg';
+import { ReactComponent as InstagramIcon } from '../assets/svgs/InstagramIcon.svg';
+import { ReactComponent as PhoneIcon } from '../assets/svgs/PhoneIcon.svg';
+import { ReactComponent as LocationIcon } from '../assets/svgs/LocationIcon.svg';
 import { Link } from "react-router-dom";
 import { Element } from "react-scroll";
 import TranslationButton from "./TranslationButton";

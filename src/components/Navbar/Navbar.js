@@ -1,8 +1,8 @@
 import { useState, useRef, useCallback } from "react";
 import { NavMenu } from "./NavMenu";
 import { useLocation } from "react-router-dom";
-import { ReactComponent as MenuIcon } from '../../assets/MenuIcon.svg';
-import { ReactComponent as ExitIcon } from '../../assets/ExitIcon.svg';
+import { ReactComponent as MenuIcon } from '../../assets/svgs/MenuIcon.svg';
+import { ReactComponent as ExitIcon } from '../../assets/svgs/ExitIcon.svg';
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import '../../styles/Navbar.css';
@@ -40,7 +40,7 @@ const Navbar = () => {
         >
             <div className="title">
                 <img
-                    src={require("../../assets/logo.webp")}
+                    src={require("../../assets/logo/logo.webp")}
                     alt="Logo"
                     className="logo"
                     loading="lazy"  
