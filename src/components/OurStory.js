@@ -7,15 +7,15 @@ export default function OurStory(){
     const { t } = useTranslation('ourstory');
 
     return (
-        <Element name="/ourstory" id="our-story">
-            <div className="our-story-text">
-                <h2 className="our-story-heading">
+        <Element name="/ourstory" className="our-story" id="our-story">
+            <div className="text">
+                <h2 className="heading">
                     {t("ourstory.heading")}
                 </h2>   
-                <h3 className="our-story-subheading">
+                <h3 className="subheading">
                     {t("ourstory.subheading")}
                 </h3>
-                <div className="our-story-body">
+                <div className="body">
                     {t("ourstory.body")}
                 </div>
             </div>

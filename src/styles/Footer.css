@@ -7,7 +7,7 @@
   flex-shrink: 0;
 }
 
-.footer-container {
+.footer .container {
   height: 100%;
   max-width: 1100px;
   margin: 0 auto;
@@ -16,114 +16,117 @@
 }
 
 /* footer-top-row */
-.footer-top-row {
+.footer .top-row {
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.footer-top-row-name {
+.footer .top-row .name {
   display: inline-flex;
   align-items: center;
-  color: #282c34;  
-  font-size: 1.875em;
+  color: #282c34;
+  font-weight: bold;
   margin: 0;
-  vertical-align: middle;
+  display: block;
 }
 
-.footer-top-row-location {
+.footer .top-row .location {
   display: inline-flex;
   align-items: center;
   color: #282c34;
   margin: 0;
   padding: 0;
-  vertical-align: middle;
+  display: block;
 }
 
 /* footer-bottom-row */
-.footer-bottom-row {
+.footer .bottom-row {
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.footer-bottom-row-links {
+.footer .bottom-row .links {
   display: flex;
 }
 
-.footer-link {
+.footer .link {
   margin-right: 8px;
+  color: #333;
+  text-decoration: none;
 }
 
-.footer-names {
+.footer .link:hover {
+  color: red;
+}
+
+.footer .names {
   font-size: 1em;
   font-weight: 600;
+  text-align: right;
 }
 
-.footer-social-icons {
+.footer .social-icons {
   display: flex;
   align-items: center;
   margin-top: 10px;
 }
 
-.footer-icons-spacing {
-  padding-right: 10px;
-}
-
-a {
+.footer .social-icons a {
   color: #333;
   text-decoration: none;
 }
 
-a:hover {
+.footer .social-icons a:hover {
   color: red;
 }
 
+.footer .icon-spacing {
+  padding-right: 10px;
+}
+
 @media (max-width: 768px) {
-  .footer-bottom-row-links {
+  .footer .bottom-row .links {
     display: flex;
     flex-direction: column;
   }
 
-  .footer-names {
+  .footer .names {
+    font-size: 0.9em;
     align-self: flex-end;
+    inline-size: 178px;
   }
 }
 
 /* smaller screens (mobile) */
 @media (max-width: 600px) {
-  .footer-top-row-name {
+  .footer .top-row .name {
     inline-size: 250px;
   }
 
-  .footer-top-row-location {
+  .footer .top-row .location {
     width: max-content;
   }
 
-  .footer-top-row {
+  .footer .top-row {
     margin: 0 auto;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
   }
 
-  .footer-social-icons {
+  .footer .social-icons {
     margin-top: 10px;
   }
   
-  .footer-social-icons a {
+  .footer .social-icons a {
     padding-right: 20px;
   }
 
-  /* bottom row */
-  .footer-bottom-row {
+  .footer .bottom-row {
     display: flex;
   } 
-
-  .footer-names {
-    inline-size: 178px;
-    text-align: right;
-  }
 }

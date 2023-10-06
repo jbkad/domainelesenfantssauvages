@@ -42,7 +42,7 @@ span {
 
 /* navbar title */
 h1 {
-  font-size: 2.2em;
+  font-size: 2em;
   font-weight: 800;
   padding: 0;
   margin: 0;
@@ -50,7 +50,7 @@ h1 {
 
 /* headings */
 h2 {
-  font-size: 2em;
+  font-size: 1.8em;
   font-weight: 500;
   padding: 0;
   margin: 0;
@@ -58,7 +58,7 @@ h2 {
 
 /* subheadings */
 h3 {
-  font-size: 1.17em;
+  font-size: 1.2em;
   font-weight: bold;
   padding: 0;
   margin: 0;

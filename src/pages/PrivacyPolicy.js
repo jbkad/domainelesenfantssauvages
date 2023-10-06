@@ -8,35 +8,35 @@ export default function PrivacyPolicy(){
     return (
         <div id="privacy-policy">
                 <h2 className="privacy-policy-title">
-                    {t("privacypolicy.heading")}
+                    {t("privacy_policy.main-header")}
                 </h2>   
                 <div className="privacy-policy-body">
-                    {t("privacypolicy.generalnote")}
+
+                    {t("privacy_policy.content")}
 
                     <span />
 
-                    <bold>{t("privacypolicy.designation-of-responsible-organisation-heading")}</bold>
-                    
-                    {t("privacypolicy.designation-of-responsible-organisation-1")}
+                    {/* Designation of the responsible organisation */}
+                    <bold>{t("designation_of_responsible_organisation.header")}</bold>
+                    {t("designation_of_responsible_organisation.content-paragraph_1")}
                     <br />
                     Domaine Les Enfants Sauvages
                     <br />
-                    Nikolaus {t("privacypolicy.designation-of-responsible-organisation-2")} Carolin Bantlin
+                    Nikolaus {t("designation_of_responsible_organisation.content-paragraph_2")} Carolin Bantlin
                     <br/>
                     10 - 12, rue Gilbert Salamo
                     <br/>
                     11510 Fitou
                     <br/>
                     France
+                    <span />
+                    {t("designation_of_responsible_organisation.content-paragraph_3")}
 
                     <span />
 
-                        {t("privacypolicy.designation-of-responsible-organisation-3")}
-                    
-                    <span />
-
-                    <bold>{t("privacypolicy.recovation-of-consent-heading")}</bold>
-                        {t("privacypolicy.recovation-of-consent-1")}
+                    {/* Revocation of your consent to data processing */}
+                    <bold>{t("recovation_of_consent.header")}</bold>
+                        {t("recovation_of_consent.content")}
                     
                     <span />
 
@@ -77,7 +77,8 @@ export default function PrivacyPolicy(){
                     <span />
 
                     <bold>{t("privacypolicy.server-log-files-heading")}</bold>
-                        {t("privacypolicy.server-log-files-1")}                    <ul className="privacy-policy-server-list">
+                        {t("privacypolicy.server-log-files-1")}                    
+                    <ul className="privacy-policy-server-list">
                         <li>{t("privacypolicy.server-log-files-li-1")}</li>
                         <li>{t("privacypolicy.server-log-files-li-2")}</li>
                         <li>{t("privacypolicy.server-log-files-li-3")}</li>

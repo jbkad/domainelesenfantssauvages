@@ -1,15 +1,21 @@
 {
-    "privacypolicy.heading": "Privacy Policy",
-    "privacypolicy.generalnote": "General note and mandatory information",
-    
-    "privacypolicy.designation-of-responsible-organisation-heading": "Designation of the responsible organisation",
-    "privacypolicy.designation-of-responsible-organisation-1": "The responsible data processing unit on this site is:",
-    "privacypolicy.designation-of-responsible-organisation-2": "and",
-    "privacypolicy.designation-of-responsible-organisation-3": "The responsible organization, alone or together with others, decide on the purposes and means of processing personal data (such as names, contact details, etc.).",
+    "privacy_policy": {
+        "main-header": "Privacy Policy",
+        "content": "General note and mandatory information"
+    },
 
-    "privacypolicy.recovation-of-consent-heading": "Revocation of your consent to data processing",
-    "privacypolicy.recovation-of-consent-1": "Only with your express consent are certain data processing processes possible. A revocation of your consent already given is possible at any time. For the revocation is sufficient an informal message by e-mail. The legality of the data processing carried out until the revocation remains unaffected by the revocation.",
-    
+    "designation_of_responsible_organisation": {
+        "header": "Designation of the responsible organisation",
+        "content-paragraph_1": "The responsible data processing unit on this site is:",
+        "content-paragraph_2": "and",
+        "content-paragraph_3": "The responsible organization, alone or together with others, decide on the purposes and means of processing personal data (such as names, contact details, etc.)."
+    },
+
+    "recovation_of_consent": {
+    "header": "Revocation of your consent to data processing",
+    "content": "Only with your express consent are certain data processing processes possible. A revocation of your consent already given is possible at any time. For the revocation is sufficient an informal message by e-mail. The legality of the data processing carried out until the revocation remains unaffected by the revocation."
+    },
+
     "privacypolicy.right-to-compliant-heading": "Right to lodge a complaint with the competent authority",
     "privacypolicy.right-to-compliant-1": "As a data subject, in the event of a breach of data protection law, you have a right of appeal to the competent supervisory authority. The competent data protection supervisory authority is the data protection officer of the federal state in which our company is headquartered. Here's a list of data protection officers and their ",
     "privacypolicy.right-to-compliant-2": "their contact details",

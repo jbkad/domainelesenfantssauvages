@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { scroll_icon } from '../styles/utils/Constants';
+import { ReactComponent as ScrollIcon } from '../assets/ScrollIcon.svg';
 import '../styles/ScrollButton.css';
 
 const ScrollButton = () => {
@@ -33,7 +33,7 @@ const ScrollButton = () => {
       onClick={buttonScrollToTop}
       data-testid="footer__scroll-btn"
     >
-      {scroll_icon}
+      <ScrollIcon />
     </div>
   );
 };

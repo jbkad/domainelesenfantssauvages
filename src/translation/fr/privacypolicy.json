@@ -1,15 +1,21 @@
 {
-    "privacypolicy.heading": "Politique de confidentialité",
-    "privacypolicy.generalnote": "Note générale et informations obligatoires",
-    
-    "privacypolicy.designation-of-responsible-organisation-heading": "Désignation de l'organisme responsable",
-    "privacypolicy.designation-of-responsible-organisation-1": "L'unité de traitement des données responsable sur ce site est:",
-    "privacypolicy.designation-of-responsible-organisation-2": "et",
-    "privacypolicy.designation-of-responsible-organisation-3": "L'organisme responsable, seul ou de concert avec d'autres, décide des objectifs et des moyens de traiter les données personnelles (tels que les noms, les coordonnées, etc.).",
-    
-    "privacypolicy.recovation-of-consent-heading": "Révocation de votre consentement au traitement des données",
-    "privacypolicy.recovation-of-consent-1": "Seulement avec votre consentement exprès sont certains processus de traitement de données possibles. Une révocation de votre consentement déjà donné est possible à tout moment. Pour la révocation est suffisante un message informel par e-mail. La légalité du traitement des données effectué jusqu'à la révocation n'est pas affectée par la révocation.",
-    
+    "privacy_policy": {
+        "main-header": "Politique de confidentialité",
+        "content": "Note générale et informations obligatoires"
+    },
+
+    "designation_of_responsible_organisation": {
+    "header": "Désignation de l'organisme responsable",
+    "content-paragraph_1": "L'unité de traitement des données responsable sur ce site est:",
+    "content-paragraph_2": "et",
+    "content-paragraph_3": "L'organisme responsable, seul ou de concert avec d'autres, décide des objectifs et des moyens de traiter les données personnelles (tels que les noms, les coordonnées, etc.)."
+    },
+
+    "recovation_of_consent": {
+    "header": "Révocation de votre consentement au traitement des données",
+    "content": "Seulement avec votre consentement exprès sont certains processus de traitement de données possibles. Une révocation de votre consentement déjà donné est possible à tout moment. Pour la révocation est suffisante un message informel par e-mail. La légalité du traitement des données effectué jusqu'à la révocation n'est pas affectée par la révocation."
+    },
+
     "privacypolicy.right-to-compliant-heading": "Droit de porter plainte auprès de l'autorité compétente",
     "privacypolicy.right-to-compliant-1": "En tant que personne concernée, en cas de violation de la loi sur la protection des données, vous disposez d'un droit de recours auprès de l'autorité de surveillance compétente. L'autorité de surveillance compétente en matière de protection des données est l'agent de protection des données de l'État fédéral dans lequel se trouve le siège de notre société. Le lien suivant fournit une liste d'agents de protection des données et ",
     "privacypolicy.right-to-compliant-2": "leurs coordonnées",

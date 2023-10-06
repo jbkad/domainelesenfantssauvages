@@ -1,20 +1,20 @@
-.our-wines-heading {
+.our-wines .heading {
     text-align: center;
 }
 
-.our-story-subheading {
+.our-wines .subheading {
     text-align: center;
     margin-bottom: 10px;
 }
 
-.our-wines-container {
+.our-wines .container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
 }
 
-.our-wines-img-container {
+.our-wines .img-container {
     position: relative;
     width: 350px;
     height: 250px;
@@ -26,7 +26,7 @@
     overflow: hidden;
 }
 
-.our-wines-img {
+.our-wines img {
     position: relative;
     width: 350px;
     height: 250px;
@@ -38,7 +38,7 @@
     transition: opacity 0.3s;
 }
 
-.our-wines-img-skeleton {
+.our-wines .img-skeleton {
     opacity: 0.7;
     animation: skeleton-loading 1s linear infinite alternate;
 }
@@ -53,7 +53,7 @@
     }
 }
 
-.img-overlay {
+.our-wines .img-overlay {
     position: absolute;
     top: 0;
     left: 0;
@@ -69,7 +69,7 @@
 }
 
 /* the image caption that is revealed when hovered over */
-.img-caption {
+.our-wines .caption {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -82,6 +82,6 @@
     transition: opacity 0.5s;
 }
 
-.our-wines-img-container.hovered .img-caption {
+.our-wines .img-container.hovered .caption {
     opacity: 1;
 }

@@ -1,5 +1,8 @@
 import React from "react";
-import { mail_footer_icon, phone_footer_icon, instagram_footer_icon, location_footer_icon } from '../styles/utils/Constants';
+import { ReactComponent as MailIcon } from '../assets/MailIcon.svg';
+import { ReactComponent as InstagramIcon } from '../assets/InstagramIcon.svg';
+import { ReactComponent as PhoneIcon } from '../assets/PhoneIcon.svg';
+import { ReactComponent as LocationIcon } from '../assets/LocationIcon.svg';
 import { Link } from "react-router-dom";
 import { Element } from "react-scroll";
 import TranslationButton from "./TranslationButton";
@@ -11,43 +14,60 @@ export default function Footer(){
     const { t } = useTranslation('footer');
 
     return (
-        <Element name="/contact" id="footer">
-            <div className="footer-container">
-                <div className="footer-top-row">
-                    <div className="footer-top-row-title-items">
-                        <h1 className="footer-top-row-name">Domaine Les Enfants Sauvages</h1>
-                        <br/>
-                        <h3 className="footer-top-row-location">
-                            {t("footer.location")}
-                        </h3>
+        <Element name="/contact" className="footer" id="footer">
+            <div className="container">
+                <div className="top-row">
+                    <div className="items">
+                        <h2 className="name">Domaine Les Enfants Sauvages</h2>
+                        <h3 className="location">{t("footer.location")}</h3>
                     </div>
-                    <div className="footer-social-icons">
-                        <a href="mailto:info@les-enfants-sauvages.com" className="footer-icons-spacing">
-                            {mail_footer_icon}
+                    <div className="social-icons">
+                        <a 
+                            href="mailto:info@les-enfants-sauvages.com" 
+                            className="icon-spacing"
+                        >
+                            <MailIcon />
                         </a>
-                        <a href="tel: +33 624918925" className="footer-icons-spacing">
-                            {phone_footer_icon}
+                        <a 
+                            href="tel: +33 624918925" 
+                            className="icon-spacing"
+                        >
+                            <PhoneIcon />
                         </a>
-                        <a href="https://www.instagram.com/domaine.les.enfants.sauvages/" target="blank" className="footer-icons-spacing">
-                            {instagram_footer_icon}
+                        <a 
+                            href="https://www.instagram.com/domaine.les.enfants.sauvages/" 
+                            target="blank" 
+                            className="icon-spacing"
+                        >
+                            <InstagramIcon />
                         </a>
-                        <a href="https://goo.gl/maps/3JdH89y7KxqeiMmf8" target="blank">
-                            {location_footer_icon}
+                        <a 
+                            href="https://goo.gl/maps/3JdH89y7KxqeiMmf8" 
+                            target="blank"
+                        >
+                            <LocationIcon />
                         </a>
                     </div>
                 </div>
                 
-                <div className="footer-bottom-row">
-                    <div className="footer-bottom-row-links">
-                        <Link to="/legalnotice" className='footer-link' preventScrollReset={true}>
+                <div className="bottom-row">
+                    <div className="links">
+                        <Link 
+                            to="/legalnotice" 
+                            className='link' 
+                            preventScrollReset={true}
+                        >
                             {t("footer.legalnotice")}
                         </Link>
-                        <Link to="/privacypolicy" className='footer-link'>
+                        <Link 
+                            to="/privacypolicy" 
+                            className='link'
+                        >
                             {t("footer.privacypolicy")}
                         </Link>
                         <TranslationButton />
                     </div>
-                    <div className="footer-names">
+                    <div className="names">
                         Carolin, Nikolaus Bantlin | Juri, Falk Bantlin
                     </div>
 

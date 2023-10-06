@@ -5,6 +5,11 @@
 .privacy-policy-link {
   font-weight: bold;
   align-content: center;
+  color: #333;
+}
+
+.privacy-policy-link:hover {
+  color: red;
 }
 
 .privacy-policy-server-list ul {

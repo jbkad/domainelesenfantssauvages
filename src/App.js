@@ -4,7 +4,7 @@ import Footer from './components/Footer';
 import LegalNotice from './pages/LegalNotice';
 import PrivacyPolicy from './pages/PrivacyPolicy';
 import Home from './pages/Home';
-import Navbar from './components/Navbar';
+import Navbar from './components/Navbar/Navbar';
 import ScrollToTop from './components/ScrollToTop';
 
 function App() {
