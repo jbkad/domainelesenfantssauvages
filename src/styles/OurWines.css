@@ -75,7 +75,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
     color: white;
-    font-weight: bold;
+    font-family: 'Urbanist', sans-serif; 
     font-size: 15px;
     text-align: center;
     opacity: 0;

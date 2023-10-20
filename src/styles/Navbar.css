@@ -101,21 +101,6 @@
     }
 }
 
-@media (orientation: landscape) and (max-width: 865px) {
-    .navbar {
-        height: 25vh;
-    }
-    
-    .navbar .title {
-        width: max-content;
-    }
-
-    .navbar .subheading {
-        width: max-content;
-    }
-}
-
-
 /* smaller screens (mobile) */
 @media (max-width: 680px) {
     .navbar .menu-icon {
